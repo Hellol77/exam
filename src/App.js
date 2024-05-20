@@ -10,10 +10,7 @@ import {
 } from "./components/styles";
 import nextId from "react-id-generator";
 import { useDispatch, useSelector } from "react-redux";
-import todosSlice, {
-  __addToDo,
-  __deleteTodo,
-} from "./redux/modules/todosSlice";
+import { __addToDo, __deleteTodo } from "./redux/modules/todosSlice";
 
 function App() {
   const id = nextId();
