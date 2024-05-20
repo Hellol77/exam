@@ -29,12 +29,12 @@ function App() {
     dispatch(__addToDo({ id, title, body }));
   };
 
-  const onDeleteTodo = (id) => {
+  const onDeleteTodo = (selectId) => {
     /**
      * 시험 문제 2.
      * 이곳에서 삭제하기 기능을 구현해주세요.
      */
-    dispatch(__deleteTodo(id));
+    dispatch(__deleteTodo(selectId));
   };
 
   const resetInputs = () => {
@@ -77,7 +77,7 @@ function App() {
             <TodoCard key={todo.id}>
               <span>제목: {todo.title}</span>
               <span>할 일: {todo.body}</span>
-              <Button onClick={onDeleteTodo(todo.id)}>삭제하기</Button>
+              <Button onClick={() => onDeleteTodo(todo.id)}>삭제하기</Button>
             </TodoCard>
           ))}
         </TodoListContainer>
